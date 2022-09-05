@@ -5,7 +5,7 @@ import { initialState } from "./initialState";
 const reducer = (state=initialState, action) => {
 
     const nextToDoId = (todos) => {
-        
+
         const maxId = todos.reduce((maxId, todo) => Math.max(todo.id, maxId), -1);
         return maxId + 1 ;
     }
@@ -62,7 +62,7 @@ const reducer = (state=initialState, action) => {
         
     
             default:
-                break;
+                return state;
     }
 }
 
