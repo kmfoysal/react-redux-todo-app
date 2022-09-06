@@ -46,7 +46,9 @@ const Todo = ({toDo}) => {
           )}
         </div>
 
-        <div class="select-none flex-1">{text}</div>
+        <div class={`select-none flex-1 ${completed && "line-through"}`}>
+          {text}
+        </div>
 
         <div
           class={`flex-shrink-0 h-4 w-4 rounded-full border-2 ml-auto cursor-pointer border-green-500 hover:bg-green-500 ${
